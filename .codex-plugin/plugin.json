@@ -1,6 +1,6 @@
 {
   "name": "zhiphoto",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Compose prompts, generate images with Codex image_gen, or hand off prompt batches through a local offline page.",
   "author": {
     "name": "zhi-ai-lab",

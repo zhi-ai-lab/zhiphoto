@@ -71,7 +71,7 @@ codex plugin marketplace add zhi-ai-lab/zhiphoto
 codex plugin add zhiphoto@zhi-ai-lab
 ```
 
-The marketplace entry is pinned to `v1.0.1`. Restart or reload Codex skill discovery after installation when required by the host application.
+The marketplace entry is pinned to `v1.0.2`. Restart or reload Codex skill discovery after installation when required by the host application.
 
 ### Quick install (npx skills)
 
