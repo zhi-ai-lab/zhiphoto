@@ -41,7 +41,7 @@ codex plugin marketplace add zhi-ai-lab/zhiphoto
 codex plugin add zhiphoto@zhi-ai-lab
 ```
 
-marketplace 条目固定到当前发布版本。如果宿主应用有相应要求，请重启 Codex，或重新加载 Codex 技能发现结果。
+marketplace 条目固定到 `v1.0.0`。如果宿主应用有相应要求，请重启 Codex，或重新加载 Codex 技能发现结果。
 
 ## 快速安装（npx skills）
 
