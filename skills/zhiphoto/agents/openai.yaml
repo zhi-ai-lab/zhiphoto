@@ -1,0 +1,6 @@
+interface:
+  display_name: "ZhiPhoto"
+  short_description: "Generate and modify images with Codex"
+  default_prompt: "Use $zhiphoto to describe an image to generate — optionally with a reference — or an existing one to modify, and it will route, generate or modify, save, and verify the result."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+  <title id="title">ZhiPhoto: turn an idea into a verified image</title>
+  <desc id="desc">A project-native diagram showing an idea becoming a prompt, passing through Codex image_gen, and arriving as a verified local image.</desc>
+
+  <defs>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2d8cff"/>
+      <stop offset="0.52" stop-color="#5b4bdb"/>
+      <stop offset="1" stop-color="#d62cff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M1 1 L10 6 L1 11" fill="none" stroke="#f27a16" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="440" rx="30" fill="#fbfaf7"/>
+  <path d="M56 386 H1144" stroke="#e6e1d8" stroke-width="2"/>
+
+  <g id="title-block">
+    <text x="64" y="62" fill="#f27a16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" letter-spacing="2">CODEX SKILL / IMAGE GENERATION</text>
+    <text x="64" y="138" fill="#111943" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="70" font-weight="760" letter-spacing="-2">ZhiPhoto</text>
+    <text x="64" y="188" fill="#171820" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="28" font-weight="650">Turn an idea into a verified image.</text>
+    <text x="64" y="232" fill="#676b78" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">Compose the prompt in Codex, call image_gen,</text>
+    <text x="64" y="260" fill="#676b78" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">then save and verify the exact local render.</text>
+
+    <g transform="translate(64 300)">
+      <rect width="168" height="42" rx="21" fill="#111943"/>
+      <text x="84" y="27" text-anchor="middle" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">PYTHON 3.10+</text>
+    </g>
+    <g transform="translate(244 300)">
+      <rect width="178" height="42" rx="21" fill="#f0ece5" stroke="#dcd6cb"/>
+      <text x="89" y="27" text-anchor="middle" fill="#343744" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">CODEX NATIVE</text>
+    </g>
+    <g transform="translate(434 300)">
+      <rect width="158" height="42" rx="21" fill="#fff0e2" stroke="#ffc58e"/>
+      <text x="79" y="27" text-anchor="middle" fill="#b6530d" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">LOCAL OUTPUT</text>
+    </g>
+    <text x="64" y="415" fill="#858895" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" letter-spacing="1.4">PROMPT → RENDER → VERIFIED FILE</text>
+  </g>
+
+  <g id="project-proof">
+    <path d="M676 214 C733 214 746 214 789 214" fill="none" stroke="#f27a16" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1007 214 C1022 214 1028 214 1048 214" fill="none" stroke="#f27a16" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="676" cy="214" r="9" fill="#f27a16"/>
+
+    <g transform="translate(636 132)">
+      <rect width="132" height="158" rx="18" fill="#ffffff" stroke="#171820" stroke-width="3"/>
+      <text x="20" y="34" fill="#858895" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700">01</text>
+      <path d="M29 77 C44 60 60 96 76 76 C87 62 102 66 109 77" fill="none" stroke="#171820" stroke-width="3" stroke-linecap="round"/>
+      <path d="M31 103 C46 90 58 119 71 103 C82 90 94 104 108 94" fill="none" stroke="#171820" stroke-width="3" stroke-linecap="round"/>
+      <path d="M35 130 C50 116 64 145 80 126" fill="none" stroke="#f27a16" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="101" cy="119" r="5" fill="#f27a16"/>
+    </g>
+
+    <g transform="translate(789 82)">
+      <rect width="218" height="264" rx="22" fill="#ffffff" stroke="#171820" stroke-width="3"/>
+      <path d="M1 56 H217" stroke="#171820" stroke-width="3"/>
+      <circle cx="24" cy="28" r="6" fill="#f27a16"/>
+      <circle cx="45" cy="28" r="6" fill="#e8dfd4"/>
+      <circle cx="66" cy="28" r="6" fill="#e8dfd4"/>
+      <text x="91" y="34" fill="#171820" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">image_gen</text>
+      <rect x="22" y="78" width="174" height="78" rx="12" fill="#f7f4ee" stroke="#dcd6cb"/>
+      <text x="38" y="108" fill="#676b78" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">prompt</text>
+      <path d="M38 124 H158 M38 140 H132" stroke="#f27a16" stroke-width="3" stroke-linecap="round"/>
+      <rect x="14" y="174" width="190" height="72" rx="12" fill="#111943"/>
+      <circle cx="43" cy="205" r="14" fill="url(#orb)"/>
+      <path d="M36 205 C40 196 48 196 51 205 C48 214 40 214 36 205Z" fill="none" stroke="#ffffff" stroke-width="2"/>
+      <text x="70" y="202" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700">render ready</text>
+      <text x="70" y="225" fill="#aeb5d8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">asset ready</text>
+    </g>
+
+    <g transform="translate(1048 132)">
+      <rect width="104" height="158" rx="18" fill="#ffffff" stroke="#171820" stroke-width="3"/>
+      <text x="17" y="34" fill="#858895" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700">03</text>
+      <rect x="18" y="55" width="68" height="63" rx="10" fill="#eef3ff" stroke="#5b4bdb" stroke-width="3"/>
+      <path d="M28 103 L47 82 L58 93 L68 84 L79 103Z" fill="url(#orb)" opacity="0.9"/>
+      <circle cx="67" cy="69" r="6" fill="#ffb23e"/>
+      <path d="M27 133 H77" stroke="#f27a16" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <g transform="translate(1060 42)">
+      <circle cx="44" cy="44" r="38" fill="url(#orb)"/>
+      <path d="M20 45 C27 26 47 22 64 37 C52 35 42 40 36 51 C31 60 24 59 20 45Z" fill="#111943"/>
+      <circle cx="49" cy="39" r="6" fill="#ffb23e"/>
+      <path d="M44 66 V88 M34 79 L44 89 L54 79" fill="none" stroke="#ffb23e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

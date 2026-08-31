@@ -1,0 +1,9 @@
+# Real-Person Visual-Source Boundary
+
+Anchor points that already exist and still apply: `SKILL.md`'s adult rule ("require unmistakably adult subjects… Do not increase sexual intensity beyond the user's request") and the transport's platform-safety posture. This file adds explicit rules on top of those, because a *photo of a real person used as visual source* is this type's riskiest input.
+
+1. **No adult profile exists in this type, by design** — all four profiles are `maturity: general`. A real-person visual source is never combined with sexualized or adult output — refuse regardless of framing or claimed consent, and never reroute a real-person reference into another type's adult profile (for example `selfie`'s adult profile) as a workaround.
+2. **Benign transformation is the permitted core.** Stylizing a customer-supplied photo of a person into an art style, playful scene changes, "one like this" — all permitted at the customer's request; this is the type's everyday use.
+3. **Photoreal recreation of an identifiable person in new scenes — the explicit rule:** permitted for clearly benign, creative asks; refused when the output could pass as a real photograph of an event that did not happen in a way that deceives, harasses, defames, or fabricates endorsement — and refused outright when the request itself names such a context. When intent is ambiguous *and* the output would be photoreal, prefer a visibly stylized rendering or ask one plain question; never silently produce the deceptive-capable version.
+4. **Minors in the reference:** benign, clearly stylized transformations only; never photoreal recreation in new scenes; rules 1 and 3 apply with no ambiguity branch.
+5. **An `image_gen` refusal or content-policy block is a result, not an obstacle.** Report it; never re-prompt or paraphrase to defeat the built-in tool's safety behavior.

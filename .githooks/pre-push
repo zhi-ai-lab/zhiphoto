@@ -1,0 +1,44 @@
+#!/bin/sh
+# Allow GitHub pushes only from the local dev branch to remote dev.
+
+set -eu
+
+remote_name=${1-}
+remote_url=${2-}
+
+case "$remote_url" in
+  https://github.com/* | https://github.com:*/* | \
+  http://github.com/* | http://github.com:*/* | \
+  git://github.com/* | git://github.com:*/* | \
+  ssh://*@github.com/* | ssh://*@github.com:*/* | \
+  ssh://github.com/* | ssh://github.com:*/* | \
+  git@github.com:* | github.com:*)
+    is_github=true
+    ;;
+  *)
+    is_github=false
+    ;;
+esac
+
+# This repository's branch policy is enforced only for GitHub destinations.
+if [ "$is_github" != true ]; then
+  exit 0
+fi
+
+current_branch=$(git symbolic-ref --quiet --short HEAD 2>/dev/null || true)
+if [ "$current_branch" != dev ]; then
+  echo "pre-push: GitHub pushes must be made while local branch dev is checked out." >&2
+  exit 1
+fi
+
+while IFS=' ' read -r local_ref local_oid remote_ref remote_oid; do
+  # Git supplies one line per ref update. Exact ref names deliberately reject
+  # branch aliases, SHA/HEAD sources, tags, deletions, and mixed ref pushes.
+  if [ "$local_ref" != refs/heads/dev ] || [ "$remote_ref" != refs/heads/dev ]; then
+    echo "pre-push: GitHub pushes may update only refs/heads/dev from refs/heads/dev." >&2
+    echo "pre-push: rejected mapping ${local_ref:-<missing>} -> ${remote_ref:-<missing>}." >&2
+    exit 1
+  fi
+done
+
+exit 0

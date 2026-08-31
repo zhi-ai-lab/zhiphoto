@@ -1,0 +1,40 @@
+{
+  "name": "zhiphoto",
+  "version": "0.5.0",
+  "description": "Compose prompts, generate images with Codex image_gen, or hand off prompt batches through a local offline page.",
+  "author": {
+    "name": "zhi-ai-lab",
+    "url": "https://github.com/zhi-ai-lab"
+  },
+  "homepage": "https://github.com/zhi-ai-lab/zhiphoto",
+  "repository": "https://github.com/zhi-ai-lab/zhiphoto",
+  "license": "Apache-2.0",
+  "keywords": [
+    "image generation",
+    "chatgpt",
+    "codex",
+    "prompt handoff",
+    "prompt engineering"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ZhiPhoto",
+    "shortDescription": "Generate images with Codex or hand off prompts",
+    "longDescription": "Compose a prompt from an image brief, route it through the extensible image-type and profile catalog, generate images with Codex's built-in image_gen tool, or hand off prompt batches through a self-contained offline page.",
+    "developerName": "zhi-ai-lab",
+    "category": "Creativity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/zhi-ai-lab/zhiphoto",
+    "defaultPrompt": [
+      "Create an image with Codex and save it locally",
+      "Generate a photorealistic portrait with a specific mood",
+      "Compose a polished image prompt from my brief"
+    ],
+    "brandColor": "#5B5DF0",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  }
+}

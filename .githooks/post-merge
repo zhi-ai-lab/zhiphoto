@@ -1,0 +1,37 @@
+#!/bin/sh
+# Remove local branches that have safely merged into the checked-out dev branch.
+
+set -u
+
+current_branch=$(git symbolic-ref --quiet --short HEAD 2>/dev/null || true)
+if [ "$current_branch" != dev ]; then
+  exit 0
+fi
+
+git for-each-ref --format='%(refname:short)' --merged HEAD refs/heads | \
+while IFS= read -r branch; do
+  case "$branch" in
+    dev | main)
+      continue
+      ;;
+  esac
+
+  if ! git branch -d -- "$branch"; then
+    echo "post-merge: kept local branch '$branch' because Git could not safely delete it." >&2
+  fi
+done
+
+# Be explicit about branches deliberately retained because they are not merged.
+git for-each-ref --format='%(refname:short)' --no-merged=HEAD refs/heads | \
+while IFS= read -r branch; do
+  case "$branch" in
+    dev | main)
+      continue
+      ;;
+  esac
+
+  echo "post-merge: kept local branch '$branch' because it is not fully merged into dev." >&2
+done
+
+# A post-merge hook must never turn a successful merge into a failed workflow.
+exit 0

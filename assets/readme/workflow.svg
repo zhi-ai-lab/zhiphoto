@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-labelledby="title desc">
+  <title id="title">The ZhiPhoto workflow</title>
+  <desc id="desc">Four steps: compose a prompt, call Codex image_gen, save the rendered asset, and verify the local file.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M1 1 L10 6 L1 11" fill="none" stroke="#f27a16" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="350" rx="28" fill="#f7f4ee"/>
+  <text x="54" y="52" fill="#f27a16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" letter-spacing="2">THE NATIVE LOOP</text>
+  <text x="54" y="96" fill="#111943" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="32" font-weight="700">One skill, four deliberate steps.</text>
+
+  <path d="M278 214 H318 M558 214 H598 M838 214 H878" fill="none" stroke="#f27a16" stroke-width="4" stroke-linecap="round"/>
+
+  <g transform="translate(54 138)">
+    <rect width="224" height="142" rx="18" fill="#ffffff" stroke="#dcd6cb" stroke-width="2"/>
+    <text x="22" y="36" fill="#f27a16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700">01</text>
+    <text x="22" y="72" fill="#171820" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="700">Compose</text>
+    <text x="22" y="102" fill="#676b78" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">Turn intent into a</text>
+    <text x="22" y="126" fill="#676b78" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">profile-guided prompt.</text>
+  </g>
+
+  <g transform="translate(334 138)">
+    <rect width="224" height="142" rx="18" fill="#ffffff" stroke="#dcd6cb" stroke-width="2"/>
+    <text x="22" y="36" fill="#f27a16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700">02</text>
+    <text x="22" y="72" fill="#171820" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="700">Generate</text>
+    <text x="22" y="102" fill="#676b78" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">Call Codex's built-in</text>
+    <text x="22" y="126" fill="#676b78" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">image_gen tool.</text>
+  </g>
+
+  <g transform="translate(614 138)">
+    <rect width="224" height="142" rx="18" fill="#111943"/>
+    <text x="22" y="36" fill="#ffb23e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700">03</text>
+    <text x="22" y="72" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="700">Save</text>
+    <text x="22" y="102" fill="#d3d8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">Place the completed render</text>
+    <text x="22" y="126" fill="#d3d8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">in the requested folder.</text>
+  </g>
+
+  <g transform="translate(894 138)">
+    <rect width="224" height="142" rx="18" fill="#ffffff" stroke="#dcd6cb" stroke-width="2"/>
+    <text x="22" y="36" fill="#f27a16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700">04</text>
+    <text x="22" y="72" fill="#171820" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="700">Verify</text>
+    <text x="22" y="102" fill="#676b78" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">Check the saved asset</text>
+    <text x="22" y="126" fill="#676b78" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">before handing it back.</text>
+  </g>
+
+  <text x="54" y="322" fill="#858895" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">No browser, cookies, passwords, or API key required.</text>
+</svg>
