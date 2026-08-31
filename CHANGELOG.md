@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.2 — 2026-08-31
+
+- Tightened the README workflow SVG's Save-card line spacing so the full copy stays
+  within the card at rendered size.
+
 ## v1.0.1 — 2026-08-31
 
 - Reflowed the README workflow SVG's Save card so every line stays inside its block.

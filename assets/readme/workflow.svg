@@ -34,9 +34,9 @@
     <rect width="224" height="142" rx="18" fill="#111943"/>
     <text x="22" y="36" fill="#ffb23e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700">03</text>
     <text x="22" y="72" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="700">Save</text>
-    <text x="22" y="102" fill="#d3d8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">Place the completed</text>
-    <text x="22" y="124" fill="#d3d8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">render in the</text>
-    <text x="22" y="146" fill="#d3d8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">requested folder.</text>
+    <text x="22" y="92" fill="#d3d8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">Place the completed</text>
+    <text x="22" y="110" fill="#d3d8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">render in the</text>
+    <text x="22" y="128" fill="#d3d8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">requested folder.</text>
   </g>
 
   <g transform="translate(894 138)">
