@@ -1,6 +1,6 @@
 # ZhiPhoto 技能
 
-[English](README.md) | 简体中文
+[English](README.md) | 简体中文 | [项目主页](https://zhi-ai-lab.github.io/zhiphoto/)
 
 ## ZhiPhoto 一览
 
@@ -41,7 +41,7 @@ codex plugin marketplace add zhi-ai-lab/zhiphoto
 codex plugin add zhiphoto@zhi-ai-lab
 ```
 
-marketplace 条目固定到 `v1.0.0`。如果宿主应用有相应要求，请重启 Codex，或重新加载 Codex 技能发现结果。
+marketplace 条目固定到 `v1.0.1`。如果宿主应用有相应要求，请重启 Codex，或重新加载 Codex 技能发现结果。
 
 ## 快速安装（npx skills）
 
