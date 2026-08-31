@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.1 — 2026-08-31
+
+- Reflowed the README workflow SVG's Save card so every line stays inside its block.
+- Added a GitHub Pages workflow that publishes the hero page and its required assets from
+  `main`, with a root redirect for the project Pages URL.
+- Added the project-page link and updated marketplace metadata to `v1.0.1`.
+
 ## v1.0.0 — 2026-08-31
 
 - Rebuilt ZhiPhoto around Codex's built-in `image_gen` tool, with first-party reference
