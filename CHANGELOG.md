@@ -12,3 +12,5 @@
 - Removed the obsolete browser-era transport and legacy public demo material from the
   release surface; documentation and marketplace metadata now describe the Codex-native
   product.
+- Clarified both README language variants so prompt handoff is described without tying the
+  workflow to a specific external image-generation service.

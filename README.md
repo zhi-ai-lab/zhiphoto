@@ -14,7 +14,7 @@
   <code>Apache-2.0</code>
 </p>
 
-ZhiPhoto is an extensible Codex skill for composing image prompts and either generating images through Codex's built-in image-generation tool (then verifying the saved result), or — when what's asked for is prompts rather than images — handing off a batch as a local, offline web page for you to run yourself in your own ChatGPT session.
+ZhiPhoto is an extensible Codex skill for composing image prompts and either generating images through Codex's built-in image-generation tool (then verifying the saved result), or — when what's asked for is prompts rather than images — handing off a batch as a local, offline web page for you to run yourself in your own image-generation session.
 
 ## See the loop
 
@@ -50,7 +50,7 @@ These local examples show the visual path ZhiPhoto is built around: start with i
 - Generates the image through Codex's built-in image-generation tool and waits for the completed render.
 - Locates the tool's saved output file and moves it into the resolved destination directory.
 - Saves the verified asset to the requested local destination with collision-safe naming and format checks. By default, every run gets its own timestamped folder under `.local/output/` holding the image together with a `<basename>.prompt.md` sidecar recording the exact prompt that was submitted.
-- When the request's deliverable is prompts instead of images (for example "generate 10 prompts for..."), composes the same way but skips `image_gen` entirely: it writes a timestamped folder under `.local/output/` holding a machine-readable `batch.json` manifest and a self-contained `prompts.html` page. Each prompt card shows a copy button, a reference badge stating whether — and what — to attach when you paste it into your own ChatGPT session, and a toggle to mark it tested once you've reviewed the result yourself.
+- When the request's deliverable is prompts instead of images (for example "generate 10 prompts for..."), composes the same way but skips `image_gen` entirely: it writes a timestamped folder under `.local/output/` holding a machine-readable `batch.json` manifest and a self-contained `prompts.html` page. Each prompt card shows a copy button, a reference badge stating whether — and what — to attach when you run it in your own image-generation session, and a toggle to mark it tested once you've reviewed the result yourself.
 
 ## First use
 
@@ -92,10 +92,10 @@ Automatic invocation is enabled, so ordinary single-image text-to-image requests
 ### Ask for prompts instead
 
 ```text
-Use $zhiphoto to generate 10 prompts for window-light portraits — I'll test them myself in ChatGPT.
+Use $zhiphoto to generate 10 prompts for window-light portraits — I'll test them myself in my own image-generation tool.
 ```
 
-Explicit prompt-deliverable phrasing like this routes to the prompt-handoff mode instead of generation: ZhiPhoto composes the batch and writes a local `prompts.html` page (plus its `batch.json` manifest) for you to copy from and paste into your own ChatGPT session. No image is generated here, and nothing on chatgpt.com is opened, linked to, or automated in this mode either — you paste, attach references, and review the results yourself.
+Explicit prompt-deliverable phrasing like this routes to the prompt-handoff mode instead of generation: ZhiPhoto composes the batch and writes a local `prompts.html` page (plus its `batch.json` manifest) for you to copy from and run in your own image-generation session. No image is generated here, and no external website is opened, linked to, or automated in this mode — you paste, attach references, and review the results yourself.
 
 ## How the repository is shaped
 
@@ -118,7 +118,7 @@ skills/zhiphoto/
             └── profiles/**/*.md
 ```
 
-`SKILL.md` is a stable router; it also decides which of the two transports below a request belongs to. `image_catalog.py` discovers valid type and profile references, validates the catalog, and returns the guidance the agent must read. Two transport references share that same routing output: `codex-image-gen.md` owns `image_gen` invocation, output-file placement, filename collision handling, format detection, and final visual verification; `prompt-handoff.md` owns composing a batch into `batch.json` and rendering it — via the deterministic `scripts/prompt_page.py` — into a local `prompts.html` page, with no `image_gen` call and no chatgpt.com automation.
+`SKILL.md` is a stable router; it also decides which of the two transports below a request belongs to. `image_catalog.py` discovers valid type and profile references, validates the catalog, and returns the guidance the agent must read. Two transport references share that same routing output: `codex-image-gen.md` owns `image_gen` invocation, output-file placement, filename collision handling, format detection, and final visual verification; `prompt-handoff.md` owns composing a batch into `batch.json` and rendering it — via the deterministic `scripts/prompt_page.py` — into a local `prompts.html` page, with no `image_gen` call and no external-site automation.
 
 Neither the root router nor the catalog script enumerates type or profile IDs. Adding a valid type or profile does not require editing either file.
 
@@ -140,7 +140,7 @@ Catalog ordering is deterministic by `sort_order` and then ID, so equal sort ord
 - Image generation happens through Codex's own built-in `image_gen` tool; no third-party website is involved, and the workflow does not read cookies, stored passwords, browser profiles, or other authentication data.
 - Reference images the agent loads with `view_image` stay within the Codex session; they are not uploaded to any external service.
 - Unless the customer's request explicitly asks to generate directly, ZhiPhoto saves the composed prompt locally and asks the customer to confirm before actually calling `image_gen`.
-- Prompt-handoff mode composes prompts and writes a local page only — it never opens, navigates to, links to, or submits anything to chatgpt.com or any other website. You copy each prompt into your own ChatGPT session, attach references yourself where a badge asks for one, and review the images yourself; ZhiPhoto does not automate that step.
+- Prompt-handoff mode composes prompts and writes a local page only — it never opens, navigates to, links to, or submits anything to an external website. You copy each prompt into your own image-generation session, attach references yourself where a badge asks for one, and review the images yourself; ZhiPhoto does not automate that step.
 - Single-image output is the default. Explicit multi-image requests become an ordered shot list and are generated one shot at a time.
 - Generated results can contain inaccuracies or artifacts; the workflow verifies the saved file but cannot guarantee artistic or factual correctness.
 
